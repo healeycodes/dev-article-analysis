@@ -69,3 +69,7 @@ footer {
   padding-top: 25px;
   border-top: 1px solid lightgrey;
 }
+
+.chart {
+  margin: 50px 0;
+}
