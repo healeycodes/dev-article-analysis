@@ -1,27 +1,48 @@
-Welcome to Glitch
+DEV Article Analysis
 =================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+A tool to analyze a [DEV](https://dev.to) user's articles (readability, complexity and grade level, semantic analysis) over time.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+The data is displayed in interactive charts.
 
-Find out more [about Glitch](https://glitch.com/about).
+<br>
 
+### Install
 
-Your Project
-------------
+`npm i`
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+<br>
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+### Setup
 
+Setup the application port, and DEV API key ([https://dev.to/settings/account](https://dev.to/settings/account))
 
-Made by [Glitch](https://glitch.com/)
--------------------
+**Linux/macOS**
+```
+export PORT=3000
+export DEV_KEY=abc123
+```
 
-\ ゜o゜)ノ
+**Command Prompt**
+```
+set PORT=3000
+set DEV_KEY=abc123
+```
+
+**PowerShell**
+```
+$env:PORT = "3000"
+$env:DEV_KEY = "abc123"
+```
+
+<br>
+
+### Run
+
+`npm run start`
+
+<br>
+
+### License
+
+MIT.

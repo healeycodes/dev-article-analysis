@@ -2,14 +2,18 @@
 <html lang="en">
   <head>
     <title>DEV Article Analysis!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/style.css">
-    <script src="/client.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <header>
@@ -19,23 +23,73 @@
     </header>
 
     <main>
-      <p class="bold">Hi!</p>
-      
-      <p>Discover some analysis of a <a href="https://dev.to">DEV</a> user's published articles:</p>
-      
-      <form>
-        <input name="user" type="text" maxlength="100" placeholder="healeycodes" aria-labelledby="submit-user">
-        <button type="button" id="submit-dream" onclick="getStats()">Submit User</button>
-      </form>
-      
-      <section class="analysis">
+      <p class="bold">Hello!</p>
 
+      <p>
+        I built a tool that analyzes your
+        <a href="https://dev.to">DEV</a> writing over time.
+      </p>
+
+      <form onsubmit="getStats(); return false;">
+        <input
+          name="user"
+          type="text"
+          maxlength="100"
+          placeholder="Username"
+          aria-labelledby="submit-user"
+        />
+        <button type="button" id="submit-dream" onclick="getStats()">
+          Submit
+        </button>
+      </form>
+
+      <section><code class="progress"></code></section>
+
+      <section class="charts">
+        <section class="chart">
+          <h3>
+            Flesch–Kincaid grade level
+            <small>
+              [<a
+                href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests"
+                >link</a
+              >]</small
+            >
+          </h3>
+          <div class="reading-grade"></div>
+        </section>
+        <section class="chart">
+          <h3>
+            Flesch reading ease<small>
+              [<a
+                href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests"
+                >link</a
+              >]</small
+            >
+          </h3>
+          <div class="reading-ease"></div>
+        </section>
+        <section class="chart">
+          <h3>
+            Sentiment analysis
+            <small>
+              [<a href="https://en.wikipedia.org/wiki/Sentiment_analysis"
+                >link</a
+              >]</small
+            >
+          </h3>
+          <div class="sentiment"></div>
+        </section>
       </section>
     </main>
 
     <footer>
-      Made by Andrew Healey (<a href="https://healeycodes.com">healeycodes.com</a>)
+      Made by Andrew Healey (<a href="https://healeycodes.com"
+        >healeycodes.com</a
+      >)
     </footer>
 
+    <script src="/apexcharts.js" defer></script>
+    <script src="/client.js" defer></script>
   </body>
 </html>
