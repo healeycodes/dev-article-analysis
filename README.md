@@ -1,9 +1,11 @@
 DEV Article Analysis
 =================
 
-A tool to analyze a [DEV](https://dev.to) user's articles (readability, complexity and grade level, semantic analysis) over time.
+A website that graphs textual statistics from a [DEV](https://dev.to) user's articles (readability, complexity, grade level, semantic analysis) over time. The data is displayed in interactive charts.
 
-The data is displayed in interactive charts.
+- Flesch–Kincaid grade level
+- Flesch reading ease
+- Sentiment analysis
 
 <br>
 
