@@ -49,6 +49,12 @@ $env:DEV_KEY = "abc123"
 
 <br>
 
+### Contributing
+
+Any fixes or improvments are welcome. Happy to help/provide advice via Issues/PRs.
+
+<br>
+
 ### License
 
 MIT.

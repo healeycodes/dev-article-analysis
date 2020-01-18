@@ -77,7 +77,12 @@ module.exports = (user, ws) => {
 
   getArticles(user)
     .then(articles =>
-      ws.send(JSON.stringify({ msg: "", result: getStats(articles) }))
+      ws.send(
+        JSON.stringify({
+          msg: `Finished crunching data for: ${user} ${emojis.random()}`,
+          result: getStats(articles)
+        })
+      )
     )
     .catch(err => {
       console.error(err);

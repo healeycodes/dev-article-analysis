@@ -29,6 +29,13 @@
         I built a tool that analyzes your
         <a href="https://dev.to">DEV</a> writing over time.
       </p>
+      <p>
+        Open sourced at
+        <a href="https://github.com/healeycodes/dev-article-analysis"
+          >healeycodes/dev-article-analysis</a
+        >
+        - please contribute!
+      </p>
 
       <form onsubmit="getStats(); return false;">
         <input
@@ -37,6 +44,7 @@
           maxlength="100"
           placeholder="Username"
           aria-labelledby="submit-user"
+          autofocus
         />
         <button type="button" id="submit-dream" onclick="getStats()">
           Submit
