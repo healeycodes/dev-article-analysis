@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DEV Article Analysis!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        DEV Article Analysis
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Hi!</p>
+      
+      <p>Discover some analysis of a <a href="https://dev.to">DEV</a> user's published articles:</p>
+      
+      <form>
+        <input name="user" type="text" maxlength="100" placeholder="healeycodes" aria-labelledby="submit-user">
+        <button type="button" id="submit-dream" onclick="getStats()">Submit User</button>
+      </form>
+      
+      <section class="analysis">
+
+      </section>
+    </main>
+
+    <footer>
+      Made by Andrew Healey (<a href="https://healeycodes.com">healeycodes.com</a>)
+    </footer>
+
+  </body>
+</html>
