@@ -9,6 +9,10 @@ A website that graphs textual statistics from a [DEV](https://dev.to) user's art
 
 <br>
 
+![Flesch–Kincaid grade level chart](https://github.com/healeycodes/dev-article-analysis/blob/master/preview.png)
+
+<br>
+
 ### Install
 
 `npm i`
@@ -42,6 +46,12 @@ $env:DEV_KEY = "abc123"
 ### Run
 
 `npm run start`
+
+<br>
+
+### Contributing
+
+Any fixes or improvments are welcome. Happy to help/provide advice via Issues/PRs.
 
 <br>
 

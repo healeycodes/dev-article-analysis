@@ -32,9 +32,7 @@ function getStats() {
   socket.addEventListener("message", function(event) {
     const data = JSON.parse(event.data);
     if ("result" in data) {
-      progressSection.innerHTML = "";
       drawCharts(data.result);
-      return;
     }
     progressSection.innerText = data.msg;
   });
