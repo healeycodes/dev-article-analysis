@@ -4,8 +4,13 @@ const app = express();
 const expressWs = require("express-ws")(app);
 
 app.use(express.static("public"));
+
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
+});
+
+app.get("/example-data", (request, response) => {
+  response.send(require("./exampleData"));
 });
 
 app.ws("/user", function(ws, req) {
