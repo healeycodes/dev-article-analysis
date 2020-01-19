@@ -14,7 +14,7 @@ app.get("/example-data", (request, response) => {
 });
 
 app.ws("/user", function(ws, req) {
-  const name = req.query.name;
+  const name = req.query.name.toLowerCase();
   devApi(name, ws);
 });
 
