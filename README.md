@@ -9,7 +9,7 @@ A website that graphs textual statistics from a [DEV](https://dev.to) user's art
 
 <br>
 
-![Flesch–Kincaid grade level chart](https://github.com/healeycodes/dev-article-analysis/blob/master/preview.png)
+![This tool in action](https://github.com/healeycodes/dev-article-analysis/blob/master/analysis-tool.gif)
 
 <br>
 
