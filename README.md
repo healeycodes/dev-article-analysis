@@ -51,7 +51,7 @@ $env:DEV_KEY = "abc123"
 
 ### Contributing
 
-Any fixes or improvments are welcome. Happy to help/provide advice via Issues/PRs.
+Any fixes or improvements are welcome. Happy to help and provide advice via Issues/PRs.
 
 <br>
 
