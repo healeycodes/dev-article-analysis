@@ -1,5 +1,6 @@
 const got = require("got");
-const removeMarkdown = require("remove-markdown");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 const sentimentAnalysis = require("sentiment");
 const textReadability = require("text-readability");
 const emojis = require("./emojis");
@@ -26,8 +27,7 @@ module.exports = (user, ws) => {
       articleIds = articleIds.concat(body.map(article => article.id));
       ws.send(
         JSON.stringify({
-          msg: `Progress: got page no. ${pageCount +
-            1} of article ids ${emojis.random()}`
+          msg: `Progress: got page no. ${pageCount + 1} of article ids ${emojis.random()}`
         })
       );
       pageCount += 1;
@@ -37,7 +37,7 @@ module.exports = (user, ws) => {
     let articles = [];
     let articleCount = 0;
     // TODO: Fix duplicate ids coming back from API
-    articleIds = [...new Set(articleIds)].sort((a, b) => a - b); // sort old to new
+    articleIds = [...new Set(articleIds)].sort((a, b) => a - b);
     for (const id of articleIds) {
       articleCount += 1;
       const response = await got(`${API}/${id}`, {
@@ -52,9 +52,13 @@ module.exports = (user, ws) => {
     }
 
     return articles.map(article => {
+      const dom = new JSDOM(article.body_html);
+      // Remove non-text content
+      dom.window.document.querySelectorAll("code").forEach(code => code.remove());
+      dom.window.document.querySelectorAll("pre").forEach(pre => pre.remove());
       return {
         title: article.title,
-        text: removeMarkdown(article.body_markdown)
+        text: dom.window.document.body.textContent
       };
     });
   };

@@ -23,7 +23,8 @@ function getStats() {
   cleanUp();
   userInput.value = "";
 
-  const socket = new WebSocket(`wss://${location.host}/user?name=${user}`);
+  const protocol = location.protocol === "https:" ? "wss" : "ws";
+  const socket = new WebSocket(`${protocol}://${location.host}/user?name=${user}`);
 
   socket.addEventListener("open", function(event) {
     progressSection.innerText = "Connected";

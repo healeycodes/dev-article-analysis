@@ -10,12 +10,12 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "got": "^10.2.2",
-    "remove-markdown": "^0.3.0",
-    "sentiment": "^5.0.2",
-    "text-readability": "^1.0.4",
     "express": "^4.17.1",
-    "express-ws": "^4.0.0"
+    "express-ws": "^4.0.0",
+    "got": "^10.2.2",
+    "jsdom": "^16.0.1",
+    "sentiment": "^5.0.2",
+    "text-readability": "^1.0.4"
   },
   "engines": {
     "node": "10.x"
