@@ -1,6 +1,10 @@
 DEV Article Analysis
 =================
 
+> My blog post: [DEV Article Analysis](https://healeycodes.com/dev-article-analysis/)
+
+<br>
+
 A website that graphs textual statistics from a [DEV](https://dev.to) user's articles (readability, complexity, grade level, semantic analysis) over time. The data is displayed in interactive charts.
 
 - Flesch–Kincaid grade level
